@@ -1,0 +1,34 @@
+#mainBox{
+    -fx-background-color: #262626;
+}
+
+#btnExit{
+    -fx-background-color: #262626;
+}
+
+#desktopHead{
+    -fx-background-color: white;
+}
+
+.menu{
+    height: 20px;
+    width: 200px;
+    visibility: visible;
+    -fx-text-fill: blue;
+    -fx-fill: blue;
+    -fx-font-weight: bold;
+    -fx-background-color: 2454545;
+}
+
+.menu-item{
+    height: 20px;
+    width: 200px;
+    visibility: visible;
+    -fx-text-fill: blue;
+    -fx-fill: blue;
+    -fx-font-weight: bold;
+}
+
+#desktop{
+    -fx-background-color: whitesmoke;
+}
