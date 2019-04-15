@@ -12,26 +12,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.omega.controller.DesktopController">
+<Pane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.omega.controller.DesktopController">
 
    <children>
       <HBox prefHeight="30.0" prefWidth="1014.0" style="-fx-background-color: #262626;">
          <children>
-            <Label text="TeleMedicine" textFill="WHITE">
+            <Label prefHeight="17.0" prefWidth="120.0" text="TeleMedicine" textFill="WHITE">
                <HBox.margin>
                   <Insets left="50.0" top="5.0" />
                </HBox.margin>
             </Label>
             <Button fx:id="btnExit" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnExit" prefHeight="56.0" prefWidth="50.0" rotate="45.0" text="+" textFill="WHITE">
                <HBox.margin>
-                  <Insets left="850.0" />
+                  <Insets left="780.0" />
                </HBox.margin>
                <font>
-                  <Font name="Arial" size="20.0" />
+                  <Font name="Arial" size="25.0" />
                </font>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
             </Button>
          </children></HBox>
-      <VBox fx:id="vBox" layoutX="-1.0" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" style="-fx-background-color: #262626;" stylesheets="@stylesheet.css" />
+      <VBox fx:id="vBoxMenu" layoutX="-1.0" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" style="-fx-background-color: #262626;" stylesheets="@stylesheet.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="200.0" text="=" textFill="WHITE" />
+            <Button fx:id="desktopButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Рабочий стол" />
+            <Button fx:id="desktopButton1" layoutX="10.0" layoutY="43.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Прием" />
+            <Button fx:id="desktopButton11" layoutX="10.0" layoutY="83.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Экстренный прием" />
+            <Button fx:id="desktopButton111" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Диспансеризация" />
+            <Button fx:id="desktopButton1111" layoutX="10.0" layoutY="163.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Исследования" />
+            <Button fx:id="desktopButton11111" layoutX="10.0" layoutY="203.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Пациенты" />
+            <Button fx:id="desktopButton111111" layoutX="10.0" layoutY="243.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Телеконсультация" />
+            <Button fx:id="desktopButton1111111" layoutX="10.0" layoutY="283.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="База знаний" />
+            <Button fx:id="desktopButton11111111" layoutX="10.0" layoutY="323.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="203.0" text="Настройки" />
+         </children></VBox>
       <VBox fx:id="desktop" layoutX="189.0" layoutY="25.0" prefHeight="576.0" prefWidth="812.0" stylesheets="@stylesheet.css">
          <children>
             <HBox fx:id="desktopHead" prefHeight="70.0" prefWidth="812.0">
@@ -87,7 +102,7 @@
                         </GridPane>
                      </children>
                   </VBox>
-                  <GridPane prefHeight="570.0" prefWidth="400.0">
+                  <GridPane fx:id="portDeviceMenu" prefHeight="570.0" prefWidth="399.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -99,7 +114,6 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label prefHeight="20.0" prefWidth="193.0" text="Портативные приборы">
@@ -107,6 +121,16 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
+                        <Button text="АЛКОТЕСТЕР" GridPane.rowIndex="1"></Button>
+                        <Button text="АНАЛИЗАТОР КРОВИ" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button text="АНАЛИЗАТОР МОЧИ" GridPane.rowIndex="2" />
+                        <Button text="ГЛЮКОМЕТР" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button text="ПУЛЬСОКСИМЕТР" GridPane.rowIndex="3" />
+                        <Button text="СТЕТОФОНЕНДОСКОП" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button text="ТЕРМОМЕТР" GridPane.rowIndex="4" />
+                        <Button text="ТОНОМЕТР" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button text="ЭЛЕКТРОКАРДИОГРАФ" GridPane.rowIndex="5" />
+                        <Button text="ЭНДОСКОП" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </children>

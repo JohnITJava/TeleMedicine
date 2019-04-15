@@ -32,3 +32,17 @@
 #desktop{
     -fx-background-color: whitesmoke;
 }
+
+#vBoxMenu .button{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-text-alignment: left;
+    -fx-alignment: left;
+}
+
+#portDeviceMenu .button{
+    -fx-background-color: white;
+    -fx-border-radius: 0;
+    -fx-pref-width: 190;
+    -fx-pref-height: 80;
+}
